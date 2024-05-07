@@ -15,44 +15,52 @@ To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK
 Toolchain Installation
 
 Install West
-"""
+
+```
 pip3 install -U west
-"""
+```
 
 Clone the repository
-"""
+
+```
 git clone git@github.com:hw-tinkerers/zmk.git
-"""
+```
 
 Navigate to the folder
-"""
+
+```
 cd zmk
-"""
+```
 
 Initialize the Application
-"""
+
+```
 west init -l app/
-"""
+```
 
 Update to Fetch Modules
-"""
+
+```
 west update
-"""
+```
 
 Export Zephyr CMake package
 This allows CMake to load the code needed to build ZMK
-"""
+
+```
 west zephyr-export
-"""
+```
 
 Install Zephyr Python Dependencies
-"""
+
+```
 pip3 install -r zephyr/scripts/requirements.txt
-"""
+```
 
 Build for TR60 using
-"""
+
+```
 west build -p always -b tr60 app/
-"""
+```
 
 Flash the UF2 firmware found in DIR build/zephyr/zmk.uf2
